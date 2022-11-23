@@ -1,0 +1,54 @@
+.nav {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: rgba(0, 0, 0, 0.548);
+}
+
+.nav i {
+  font-size: 24px;
+  color: inherit;
+  margin-right: 10px;
+}
+
+.navLeft a {
+  margin-right: 20px;
+}
+
+.navRight a {
+  margin-left: 25px;
+}
+
+.nav a:hover {
+  color: aqua;
+}
+
+.searchInput {
+  background-color: #262626;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: 400px;
+  border: 0;
+  margin-left: 80px;
+  margin-right: 10px;
+}
+
+.searchInput:focus {
+  outline: 2px solid aqua;
+  animation: bump 0.3s ease both;
+}
+
+.searchInput:hover {
+    animation: bump 0.3s linear;
+}
+
+@keyframes bump {
+
+    50%{ 
+     padding: 10px 22px;
+    }
+
+
+}

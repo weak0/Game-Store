@@ -1,5 +1,6 @@
 import styles from './HomeContent.module.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { Link } from 'react-router-dom';
 const HomeContent = () => {
   return (
     <div className={styles.content}>
@@ -9,14 +10,14 @@ const HomeContent = () => {
           <p>
             The best destination to buy new games to competitive prices. 24 hour
             support, "best price" guarantee and a flawless UX. Wish for more?
-            Tell us below — or check out our careers.
+            Tell us below — or check out our <b>careers</b>.
           </p>
         </article>
         <div className={styles.actions}>
-          <button><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-magnifying-glass" /> Browse</button>
-          <button><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-dice-d6" />Play Dice</button>
-          <button><FontAwesomeIcon className={styles.icon} icon="fa-brands fa-github" />GitHub</button>
-          <button><FontAwesomeIcon className={styles.icon} icon="fa-brands fa-linkedin" />LinkedIn</button>
+          <Link to='/browse'><button><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-magnifying-glass" /> Browse</button></Link>
+          <Link to='/random'><button><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-dice-d6" />Play Dice</button></Link>
+          <a href='https://github.com/weak0'><button><FontAwesomeIcon className={styles.icon} icon="fa-brands fa-github" />GitHub</button></a>
+          <a href='https://www.linkedin.com/in/maciej-gorzela-895178176/'><button><FontAwesomeIcon className={styles.icon} icon="fa-brands fa-linkedin" />LinkedIn</button></a>
         </div>
       </section>
       <aside className={styles.quickNavigation}>

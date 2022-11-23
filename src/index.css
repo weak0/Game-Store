@@ -15,3 +15,7 @@ button {
     color: black;
     outline-color:  aqua;
 }
+
+li {
+    list-style: none;
+}
