@@ -6,7 +6,7 @@ import App from "./App";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas, faR } from "@fortawesome/free-solid-svg-icons";
-import {  faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 library.add(fas, faR, faGithub, faLinkedin);
 

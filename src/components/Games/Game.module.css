@@ -1,0 +1,73 @@
+.game {
+    width: 100%;
+    border-radius: 15px;
+    background-color: #2c2c2c ;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    transition: 0.3s;
+    height: 275px;
+
+}
+
+.game.active {
+    height: 330px;
+}
+
+.game img {
+
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+    transition: 0.5s;
+}
+
+.game img:hover {
+    transform: scale(1.2);
+    margin-bottom: 15px;
+}
+
+
+
+.cartActions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+h4 {
+    font-size: 21px;
+    padding: 5px 10px 5px 10px;
+
+}
+
+.moredetails {
+    display: none;
+    height: 0;
+    padding: 0 10px;
+
+}
+
+.moredetails.active {
+    display: block;
+    animation: opacityColor 0.5s linear 1;
+
+}
+
+.moredetails p {
+
+    display: block;
+    padding-top:10px;  
+
+
+}
+
+@keyframes opacityColor {
+
+    0%{
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}

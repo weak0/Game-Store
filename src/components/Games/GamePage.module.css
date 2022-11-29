@@ -1,0 +1,155 @@
+
+.content {
+    padding: 20px 40px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 20px 0;
+}
+
+.header button {
+    background-color: transparent;
+    color: white;
+    border: 0;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.arrow {
+    margin-right: 5px;
+    font-size: 26px;
+}
+
+.arrow.active path {
+    color: rgb(124, 34, 207);
+}
+
+.header h1 {
+    font-size: 48px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.image {
+    width: 65%;
+}
+.about {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.gamePage img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.paragraph {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.paragraph::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.about section {
+    padding: 20px;
+    line-height: 24px;
+    background-color: #1a1a1a;
+    border-radius: 20px 20px 0 0;
+}
+
+.about section h2 {
+    margin: 10px 0 20px;
+    font-size: 30px;
+}
+
+.paragraph {
+
+    font-size: 16px;
+    text-align: justify;
+    height: 220px;
+    overflow-y: scroll;
+
+}
+
+.more.active {
+    height: 210px;
+    background-color: #262626;
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+    position: relative;
+}
+
+.more p{
+    color: rgba(255, 255, 255, 0.534);
+    margin-top: 10px;
+}
+
+.more button {
+    border: 0;
+    margin-top: 20px;
+    background-color: transparent ;
+    color: white;
+    width: 100%;
+    text-align: right;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.534);
+    cursor: pointer;
+}
+
+.more button:hover {
+    color: rgb(124, 34, 207);
+}
+
+
+.more path {
+    color: inherit;
+}
+.arrowUp {
+    color: inherit;
+    margin-left: 5px;
+}
+
+
+
+.actions {
+    margin-top: 20px;
+    background-color: #262626;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+    
+}
+
+.actions span, .actions path {
+
+    display: block;
+    color: rgba(255, 255, 255, 0.596);
+
+}
+
+.actions button {
+    border: 0;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.596);
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.actions button:hover {
+    color: rgb(124, 34, 207);
+}
+
+.heart {
+    margin-left: 10px;
+}

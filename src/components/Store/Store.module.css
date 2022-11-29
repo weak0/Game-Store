@@ -1,3 +1,9 @@
 .mainStore {
     background-color: #0f1011;
 }
+.storeContent {
+
+    display: flex;
+    min-height: 100vh;
+
+}
