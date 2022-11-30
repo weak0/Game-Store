@@ -14,11 +14,11 @@ const StoreContent = () => {
           <button>Filter by: <b>none</b></button>
           <button>Clear Filters</button>
         </div>
-        <div className={styles.sortingRight}>
+        {/* <div className={styles.sortingRight}>
           <span>Display Options: </span>
           <button><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-table-cells" /></button>
           <button><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-list" /></button>
-        </div>
+        </div> */}
       </div>
         <GameListComponent/>
     </div>

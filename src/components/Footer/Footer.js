@@ -37,8 +37,8 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        This page was built by Gianluca Jahn with React. Portions of this page
-        are inspired by RAWG, RAWG.io. This page was built solely for
+        This page was built by Maciej Gorzela with React. Portions of this page
+        are inspired by RAWG, RAWG.io. and github user gianlucajahn This page was built only for
         educational purposes.
       </div>
       <div className={styles.links}>

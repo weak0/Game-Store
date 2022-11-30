@@ -1,13 +1,23 @@
 import styles from "./NavComponent.module.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Cart from "../Cart/Cart";
+import { useState } from "react";
 
 const NavComponent = (props) => {
+
+  const [isCartActive, setIsCartActive] = useState(false);
+
+  const backdropHandle = () => {
+    setIsCartActive(false)
+    console.log('object');
+  }
 
   const browseStore = <Link to="/browse"><i className="fa-solid fa-cart-shopping"></i>Browse Store</Link>
   const search = <><input className={styles.searchInput} type="text" placeholder="Search games..." /><FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /></>
 
   return (
+    <> 
     <nav className={styles.nav}>
       <div className={styles.navLeft}>
         <Link to="/"><i className="fa-solid fa-headset"></i>Game Store</Link>
@@ -15,9 +25,12 @@ const NavComponent = (props) => {
       </div>
       <div className={styles.navRight}>
         <a href="https://github.com/weak0"><i className="fa-brands fa-github"></i>Weak0</a>
-        <Link to="/cart"><i className="fa-solid fa-bag-shopping"></i>Cart:0</Link>
+        <button onClick={() => {setIsCartActive(true)}}><i className="fa-solid fa-bag-shopping"></i>Cart:0</button>
       </div>
     </nav>
+    {isCartActive ? <Cart backdrophandle={backdropHandle} /> : null}
+    </>
+   
   );
 };
 

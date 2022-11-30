@@ -21,8 +21,17 @@
   margin-left: 25px;
 }
 
-.nav a:hover {
-  color: aqua;
+.nav a:hover, .nav button:hover {
+  color: blueviolet;
+}
+
+.nav button {
+  background-color: transparent;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 25px;
 }
 
 .searchInput {
