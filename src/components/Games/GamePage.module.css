@@ -9,7 +9,7 @@
     margin: 10px 0 20px 0;
 }
 
-.header button {
+.header a {
     background-color: transparent;
     color: white;
     border: 0;
@@ -17,11 +17,11 @@
     cursor: pointer;
 }
 
-.content button {
+.content button, .content a {
     transition: 0.3s;
 }
 
-.content button:hover {
+.content button:hover, .content a:hover {
     color: rgb(124, 34, 207);
     transform: scale(1.2);
 }

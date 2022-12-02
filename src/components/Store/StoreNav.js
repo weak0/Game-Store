@@ -1,38 +1,41 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './StoreNav.module.css'
-const StoreNav = () => {
+const StoreNav = (props) => {
 
     const onMouseOverHandler = (e) => {
-    e.target = e.target.closest('ul');
+    e.target = e.target.closest('li');
     const element = e.target.children[0];
     element.classList.add(styles.active);
     }
     const onMouseDownHandler = (e) => {
-    e.target = e.target.closest('ul');
+    e.target = e.target.closest('li');
     const element = e.target.children[0];
     element.classList.remove(styles.active);
+    }
+
+    const addFilter = (e) => {
+        props.setFiltersHandler(e.target.textContent); 
     }
 
     return (
         <aside>
             <div className={styles.filters}>
-                <h2> Filters</h2>
-                <li>
-                    <ul onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler}><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-gift" />Wishlist</ul>
-                    <ul onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler}><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-star" />Ratings</ul>
-                    <ul onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler}><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-comment" />Reviews</ul>
-                </li>
+                <ul>
+                    <li onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} onClick={addFilter}><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-gift"/>Wishlist</li>
+                    <li onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} onClick={addFilter}><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-star" />Ratings</li>
+                    <li onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} onClick={addFilter}><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-comment" />Reviews</li>
+                </ul>
                 <h2>Geners</h2>
-                <li>
-                    <ul onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler}> <FontAwesomeIcon className={styles.icon} icon="fa-solid fa-gun" />Actions</ul>
-                    <ul onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler}><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-chess-rook" />Strategy</ul>
-                    <ul onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} ><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-khanda" />RPG</ul>
-                    <ul onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} ><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-poo" />Shooter</ul>
-                    <ul onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} ><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-map" />Adveture</ul>
-                    <ul onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} ><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-puzzle-piece" />Puzzle</ul>
-                    <ul onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} ><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-car" />Racing</ul>
-                    <ul onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} ><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-volleyball" />Sports</ul>
-                </li>
+                <ul>
+                    <li onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} onClick={addFilter}> <FontAwesomeIcon className={styles.icon} icon="fa-solid fa-gun" />Action</li>
+                    <li onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} onClick={addFilter}><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-chess-rook" />Strategy</li>
+                    <li onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} onClick={addFilter}><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-khanda" />RPG</li>
+                    <li onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} onClick={addFilter} ><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-poo" />Shooter</li>
+                    <li onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} onClick={addFilter} ><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-map" />Adveture</li>
+                    <li onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} onClick={addFilter}><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-puzzle-piece" />Puzzle</li>
+                    <li onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} onClick={addFilter}><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-car" />Racing</li>
+                    <li onMouseOver={onMouseOverHandler} onMouseLeave={onMouseDownHandler} onClick={addFilter} ><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-volleyball" />Sports</li>
+                </ul>
             </div>
         </aside>
     )

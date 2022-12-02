@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Game.module.css";
 
 const Game = (props) => {
   const [isActive, setIsActive] = useState(false);
-
+  const navigate = useNavigate();
+  const {title, image, genres, price ,released , id  , dbkey} = props.data
 
   const onMouseOverHandler = () => { 
    setIsActive(true) 
@@ -12,12 +14,16 @@ const Game = (props) => {
   const onMouseDownHandler = () => {
     setIsActive(false);
   };
+
+  const handleClick = () => {
+    navigate(`/game/${dbkey}/${id}`)
+  }
   return (
-    <div className={isActive ? `${styles.game}  ${styles.active}`: styles.game}>
+    <div className={isActive ? `${styles.game}  ${styles.active}`: styles.game} onClick={handleClick}>
       <div className={styles.img}>
         <img
-          src="https://res.cloudinary.com/gianlucajahn/image/upload/c_scale,q_100,w_500/v1658188604/cyberpunk_n6jitl.jpg"
-          alt="CyberPunk"
+          src={image}
+          alt={title}
         />
       </div>
       <div
@@ -27,12 +33,12 @@ const Game = (props) => {
       >
         <div className={styles.cartActions}>
           <span>Add to cart +</span>
-          <span>24.99$</span>
+          <span>${price}</span>
         </div>
-        <h4>{props.number}</h4>
+        <h4>{title}</h4>
         <div className={isActive ? `${styles.moredetails}  ${styles.active}`: styles.moredetails}>
-          <p>Released: 17.09.2013</p>
-          <p>Genres: Action, Adventure</p>
+          <p>Released: {released}</p>
+          <p>Genres: {genres}</p>
         </div>
       </div>
     </div>

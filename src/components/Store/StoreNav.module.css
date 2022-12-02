@@ -11,12 +11,12 @@
     margin-top: 30px;
 }
 
-.filters li {
+.filters ul {
     font-size: 20px;
     line-height: 40px;
 }
 
-.filters ul {
+.filters li {
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;

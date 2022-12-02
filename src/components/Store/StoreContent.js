@@ -1,8 +1,9 @@
 import styles from "./StoreContent.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import GameListComponent from "../Games/GameListComponent";
-import Footer from "../Footer/Footer";
-const StoreContent = () => {
+
+const StoreContent = (props) => {
+
+
   return (
     <div className={styles.storeContent}>
       <header>
@@ -11,8 +12,8 @@ const StoreContent = () => {
       </header>
       <div className={styles.sorting}>
         <div className={styles.sortingLeft}>
-          <button>Filter by: <b>none</b></button>
-          <button>Clear Filters</button>
+          <button>Filter by: <b>{props.filters}</b></button>
+          <button onClick={props.clearFiltersHandler}>Clear Filters</button>
         </div>
         {/* <div className={styles.sortingRight}>
           <span>Display Options: </span>

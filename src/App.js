@@ -9,9 +9,9 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="GameStore/" element={<HomePage />} />
-        <Route path="GameStore/browse" element={<Store/>} />
-        <Route path="GameStore/game" element={<GamePage/>} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/browse" element={<Store/>} />
+        <Route path="/game/:dbkey/:id" element={<GamePage/>} />
       </Routes>
     </div>
   );

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./ImageSlider.module.css";
 
-const ImageSlider = () => {
+const ImageSlider = (props) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleAngleLeft = () => {
@@ -26,13 +26,7 @@ const ImageSlider = () => {
     })
 
   }
-
-  const slides = [
-    "https://res.cloudinary.com/gianlucajahn/image/upload/v1658188604/cyberpunk_n6jitl.jpg",
-    "https://res.cloudinary.com/gianlucajahn/image/upload/c_scale,q_100,w_1920/v1658235373/cyberpunk_1_s00vwf.jpg",
-    "https://res.cloudinary.com/gianlucajahn/image/upload/c_scale,q_100,w_1920/v1658235372/cyberpunk_2_mq46xm.jpg",
-    "https://res.cloudinary.com/gianlucajahn/image/upload/c_scale,q_100,w_1920/v1658235378/cyberpunk_3_fajdmi.jpg",
-  ];
+  const slides = props.images;
   const slidesStyle = {
     backgroundImage: `url(${slides[currentIndex]})`,
     width: `100%`,
