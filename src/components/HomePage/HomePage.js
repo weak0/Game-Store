@@ -6,7 +6,7 @@ import NavComponent from "../Nav/NavComponent";
 const HomePage = () => {
   return (
     <main className={styles.main}>
-      <NavComponent/>
+      <NavComponent />
       <video autoPlay loop className={styles.video}>
         <source src={videobackground} type="video/mp4" />
       </video>

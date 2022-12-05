@@ -2,8 +2,6 @@ import styles from "./StoreContent.module.css";
 import GameListComponent from "../Games/GameListComponent";
 
 const StoreContent = (props) => {
-
-
   return (
     <div className={styles.storeContent}>
       <header>
@@ -12,7 +10,9 @@ const StoreContent = (props) => {
       </header>
       <div className={styles.sorting}>
         <div className={styles.sortingLeft}>
-          <button>Filter by: <b>{props.filters}</b></button>
+          <button>
+            Filter by: <b>{props.filters}</b>
+          </button>
           <button onClick={props.clearFiltersHandler}>Clear Filters</button>
         </div>
         {/* <div className={styles.sortingRight}>
@@ -21,7 +21,7 @@ const StoreContent = (props) => {
           <button><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-list" /></button>
         </div> */}
       </div>
-        <GameListComponent/>
+      <GameListComponent filters={props.filters} />
     </div>
   );
 };

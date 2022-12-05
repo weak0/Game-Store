@@ -1,169 +1,164 @@
-
 .content {
-    padding: 20px 40px;
+  padding: 20px 40px;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0 20px 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0 20px 0;
 }
 
 .header a {
-    background-color: transparent;
-    color: white;
-    border: 0;
-    font-size: 30px;
-    cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: 0;
+  font-size: 30px;
+  cursor: pointer;
 }
 
-.content button, .content a {
-    transition: 0.3s;
+.content button,
+.content a {
+  transition: 0.3s;
 }
 
-.content button:hover, .content a:hover {
-    color: rgb(124, 34, 207);
-    transform: scale(1.2);
+.content button:hover,
+.content a:hover {
+  color: rgb(124, 34, 207);
+  transform: scale(1.2);
 }
 
 .arrow {
-    margin-right: 5px;
-    font-size: 26px;
-    color: inherit;
+  margin-right: 5px;
+  font-size: 26px;
+  color: inherit;
 }
 
 .arrow.active path {
-    color: inherit;
+  color: inherit;
 }
 
 .header h1 {
-    font-size: 48px;
+  font-size: 48px;
 }
 
 .main {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .image {
-    width: 65%;
+  width: 65%;
 }
 .about {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .gamePage img {
-    width: 100%;
-    border-radius: 20px;
+  width: 100%;
+  border-radius: 20px;
 }
 
 .paragraph {
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
 }
-.paragraph::-webkit-scrollbar { 
-    display: none;  /* Safari and Chrome */
+.paragraph::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
 
 .about section {
-    padding: 20px;
-    line-height: 24px;
-    background-color: #1a1a1a;
-    border-radius: 20px 20px 0 0;
+  padding: 20px;
+  line-height: 24px;
+  background-color: #1a1a1a;
+  border-radius: 20px 20px 0 0;
 }
 
 .about section h2 {
-    margin: 10px 0 20px;
-    font-size: 30px;
+  margin: 10px 0 20px;
+  font-size: 30px;
 }
 
 .paragraph {
-
-    font-size: 16px;
-    text-align: justify;
-    height: 220px;
-    overflow-y: scroll;
-
+  font-size: 16px;
+  text-align: justify;
+  height: 220px;
+  overflow-y: scroll;
 }
 
 .more.active {
-    height: fit-content;
-    background-color: #262626;
-    padding: 20px;
-    border-radius: 0px 0px 20px 20px;
-    position: relative;
+  height: fit-content;
+  background-color: #262626;
+  padding: 20px;
+  border-radius: 0px 0px 20px 20px;
 }
 
-.more p{
-    color: rgba(255, 255, 255, 0.534);
-    margin-top: 10px;
+.more p {
+  color: rgba(255, 255, 255, 0.534);
+  margin-top: 10px;
 }
 
 .more button {
-    border: 0;
-    margin-top: 20px;
-    background-color: transparent ;
-    color: white;
-    text-align: right;
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.534);
-    cursor: pointer;
+  border: 0;
+  margin-top: 20px;
+  background-color: transparent;
+  color: white;
+  text-align: right;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.534);
+  cursor: pointer;
+}
+
+.actions button.active {
+  color: greenyellow;
 }
 
 .more button:hover {
-    color: rgb(124, 34, 207);
+  color: rgb(124, 34, 207);
 }
 
-
 .more path {
-    color: inherit;
+  color: inherit;
 }
 
 .moreBtn {
-    text-align: right;
+  text-align: right;
 }
 .arrowUp {
-    color: inherit;
-    margin-left: 5px;
+  color: inherit;
+  margin-left: 5px;
 }
-
-
 
 .actions {
-    margin-top: 20px;
-    background-color: #262626;
-    border-radius: 20px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 22px;
-    
+  margin-top: 20px;
+  background-color: #262626;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
 }
 
-.actions span, .actions path {
-
-    display: block;
-    color: rgba(255, 255, 255, 0.596);
-
+.actions span,
+.actions path {
+  display: block;
+  color: rgba(255, 255, 255, 0.596);
 }
 
 .actions button {
-    border: 0;
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.596);
-    font-size: 22px;
-    cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.596);
+  font-size: 22px;
+  cursor: pointer;
 }
 
 .actions button:hover {
-    color: rgb(124, 34, 207);
+  color: rgb(124, 34, 207);
 }
 
 .heart {
-    margin-left: 10px;
+  margin-left: 10px;
 }
-

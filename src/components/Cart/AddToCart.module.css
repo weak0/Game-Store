@@ -1,0 +1,15 @@
+.cartActionsBtn  {
+    background-color: transparent;
+    border:0;
+    font-size: inherit;
+    color: white;
+    cursor: pointer;
+}
+
+.cartActionsBtn.active {
+    color: greenyellow;
+}
+
+.cartActionsBtn:hover {
+    color: blueviolet;
+}

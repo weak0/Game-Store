@@ -1,52 +1,36 @@
 import styles from "./Cart.module.css";
+import { useDispatch, useSelector } from "react-redux";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { cartActions } from "../../store";
+import Li from "./CartLi";
 
 const Cart = (props) => {
+  const dispatch = useDispatch();
 
-    const clickHandler = (e) => {
-        if(e.target.classList[0] === styles.cartBackdrop ) {
-            props.backdrophandle();
-        }
+  const items = useSelector((state) => state.cart);
+  const amount = useSelector((state) => state.amount);
+
+  const clickHandler = (e) => {
+    if (e.target.classList[0] === styles.cartBackdrop) {
+      props.backdrophandle();
     }
+  };
 
   return (
     <div onClick={clickHandler} className={styles.cartBackdrop}>
       <div className={styles.cartContainer}>
         <div className={styles.cartHeader}>
-          <h2>2 Games</h2>
-          <button>Clear</button>
+          <h2>{items.length} Games</h2>
+          <button onClick={() => dispatch(cartActions.clearCart())}>
+            Clear
+          </button>
         </div>
         <div className={styles.cartMain}>
-          <ul>
-            <li>
-              <span>Life is Strange</span>{" "}
-              <span>
-                $14.99
-                <button>
-                  <FontAwesomeIcon
-                    icon="fa-solid fa-x"
-                    className={styles.cross}
-                  />
-                </button>
-              </span>
-            </li>
-            <li>
-              <span>Mario Kart 8: Deluxe</span>{" "}
-              <span>
-                $24.99
-                <button>
-                  <FontAwesomeIcon
-                    icon="fa-solid fa-x"
-                    className={styles.cross}
-                  />
-                </button>
-              </span>
-            </li>
-          </ul>
+          <ul>{<Li items={items} />}</ul>
           <div className={styles.cartSummary}>
-            <span>Total: $39.98</span>
+            <span>${amount.toFixed(2)}</span>
             <button>
-              Checkout{" "}
+              Checkout
               <FontAwesomeIcon
                 className={styles.arrow}
                 icon="fa-solid fa-arrow-right"

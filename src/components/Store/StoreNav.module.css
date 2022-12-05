@@ -1,39 +1,38 @@
 .filters {
-    max-width: 200px;
-    padding-left: 40px;
-    padding-right: 40px;
-
+  max-width: 200px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .filters h2 {
-    font-size: 30px;
-    margin-bottom: 15px;
-    margin-top: 30px;
+  font-size: 30px;
+  margin-bottom: 15px;
+  margin-top: 30px;
 }
 
 .filters ul {
-    font-size: 20px;
-    line-height: 40px;
+  font-size: 20px;
+  line-height: 40px;
 }
 
 .filters li {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  cursor: pointer;
 }
 
 .icon {
-    margin-right: 10px;
-    background-color: rgba(255, 255, 255, 0.15);
-    width: 20px;
-    height: 20px;
-    padding: 8px;
-    border-radius: 5px;
+  margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.15);
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+  border-radius: 5px;
 }
 
-.active, .active path {
-    background-color: white;
-    color: black;
+.active,
+.active path {
+  background-color: white;
+  color: black;
 }
-

@@ -12,16 +12,15 @@
   color: inherit;
   margin-right: 10px;
 }
-
 .navLeft a {
-  margin-right: 20px;
+  margin-right: 25px;
 }
-
 .navRight a {
   margin-left: 25px;
 }
 
-.nav a:hover, .nav button:hover {
+.nav a:hover,
+.nav button:hover {
   color: blueviolet;
 }
 
@@ -34,11 +33,16 @@
   margin-left: 25px;
 }
 
+.navSearchbar {
+  flex-grow: 1;
+  text-align: center;
+}
+
 .searchInput {
   background-color: #262626;
   padding: 10px 20px;
   border-radius: 8px;
-  width: 400px;
+  width: 60%;
   border: 0;
   margin-left: 80px;
   margin-right: 10px;
@@ -50,14 +54,11 @@
 }
 
 .searchInput:hover {
-    animation: bump 0.3s linear;
+  animation: bump 0.3s linear;
 }
 
 @keyframes bump {
-
-    50%{ 
-     padding: 10px 22px;
-    }
-
-
+  50% {
+    padding: 10px 22px;
+  }
 }

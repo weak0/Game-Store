@@ -5,20 +5,28 @@ import { useEffect, useState } from "react";
 import ImageSlider from "../UI/ImageSlider";
 import { Link, useParams } from "react-router-dom";
 import LoadingSpiner from "../UI/LoadingSpiner";
+import AddToCart from "../Cart/AddToCart";
+
 const GamePage = () => {
   const [moreIsActive, setMoreIsActive] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [gameInfo, setGameInfo] = useState([]);
-  let { dbkey, id } = useParams();
-
+  const { dbkey, id } = useParams();
   useEffect(() => {
     async function getGameInfo() {
-      const response = await fetch(
-        `https://gamestore-42f62-default-rtdb.europe-west1.firebasedatabase.app/games/${dbkey}/${id}.json`
-      );
-      const data = await response.json();
-      setGameInfo(data);
-      setIsLoading(false);
+      try {
+        const response = await fetch(
+          `https://gamestore-42f62-default-rtdb.europe-west1.firebasedatabase.app/games/${dbkey}/${id}.json`
+        );
+        if (!response.ok) {
+          throw new Error("Upps... sory we couldnt load this page");
+        }
+        const data = await response.json();
+        setGameInfo(data);
+        setIsLoading(false);
+      } catch (e) {
+        alert(e);
+      }
     }
     getGameInfo();
   }, [dbkey, id]);
@@ -107,7 +115,11 @@ const GamePage = () => {
                     icon="fa-solid fa-heart"
                   />
                 </span>
-                <button>Add to cart +</button>
+                <AddToCart
+                  price={gameInfo.price}
+                  title={gameInfo.title}
+                  id={id}
+                />
               </div>
             </div>
           </main>

@@ -1,16 +1,15 @@
 .gameList {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    justify-content: space-around;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .column {
-    max-width: 350px;
-    display: flex;
-    flex-direction:column;
-    justify-content: flex-start;
-    margin-left: 5px;
-    margin-right: 5px;
-
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 5px;
+  margin-right: 5px;
 }
