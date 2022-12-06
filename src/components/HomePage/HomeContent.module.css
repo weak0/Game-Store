@@ -55,7 +55,7 @@
 }
 
 .actions button,
-.quickNavigation button {
+.quickNavigation a {
   padding: 10px 15px;
   border-radius: 12px;
   border: 0;
@@ -86,11 +86,13 @@
   padding-right: 25px;
 }
 
-.quickNavigation button {
+.quickNavigation a {
   width: 235px;
+  background-color: white;
+  color: black;
 }
 
-.quickNavigation button:hover {
+.quickNavigation a:hover {
   background-color: aqua;
   width: 245px;
 }

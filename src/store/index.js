@@ -1,4 +1,5 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
+import wishListSlice from "./wishList";
 const cartSlice = createSlice({
   name: "cartSlice",
   initialState: { cart: [], amount: 0 },
@@ -27,7 +28,7 @@ const cartSlice = createSlice({
 export const cartActions = cartSlice.actions;
 
 const store = configureStore({
-  reducer: cartSlice.reducer,
+  reducer: { cartReducer : cartSlice.reducer, wishReducer: wishListSlice.reducer }
 });
 
 export default store;

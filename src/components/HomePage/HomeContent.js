@@ -54,42 +54,35 @@ const HomeContent = () => {
       </section>
       <aside className={styles.quickNavigation}>
         <h2>Quick Navigation</h2>
-        <button>
+        <Link to='/game/-NIDvAgsqSttL605KhUh/m1'>
           <FontAwesomeIcon className={styles.icon} icon="fa-solid fa-headset" />
           Gaming Page
-        </button>
-        <button>
+        </Link>
+       <Link to='/404page'>
           <FontAwesomeIcon
             className={styles.icon}
             icon="fa-solid fa-circle-exclamation"
           />
           404 Page
-        </button>
-        <button>
+        </Link>
+        <Link to='/404page'>
           <FontAwesomeIcon className={styles.icon} icon="fa-solid fa-bug" />
           404 Query
-        </button>
-        <button>
-          <FontAwesomeIcon
-            className={styles.icon}
-            icon="fa-solid fa-code-commit"
-          />
-          Commit Log
-        </button>
-        <button>
+        </Link>
+        <Link to='/'>
           <FontAwesomeIcon
             className={styles.icon}
             icon="fa-solid fa-microchip"
           />
-          Technologies
-        </button>
-        <button>
+          readme.md
+        </Link>
+        <a href="https://reactjsexample.com/an-e-commerce-store-imitating-a-game-store-built-with-react/">
           <FontAwesomeIcon
             className={styles.icon}
             icon="fa-solid fa-lightbulb"
           />
           Inspired by
-        </button>
+        </a>
       </aside>
     </div>
   );

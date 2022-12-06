@@ -7,7 +7,7 @@ export const addtoCartStyle = styles.cartActionsBtn;
 
 const AddToCart = (props) => {
   const [addedToCart, setAddedToCart] = useState(false);
-  const itemsInCart = useSelector((state) => state.cart);
+  const itemsInCart = useSelector((state) => state.cartReducer.cart);
   const dispatch = useDispatch();
 
   useEffect(() => {

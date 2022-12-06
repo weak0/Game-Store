@@ -1,13 +1,13 @@
 import styles from "./NavComponent.module.css";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Cart from "../Cart/Cart";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import Search from "./Search";
 
 const NavComponent = (props) => {
   const [isCartActive, setIsCartActive] = useState(false);
-  const itemsInCart = useSelector((state) => state.cart);
+  const itemsInCart = useSelector((state) => state.cartReducer.cart);
 
   const backdropHandle = () => {
     setIsCartActive(false);
@@ -17,16 +17,6 @@ const NavComponent = (props) => {
     <Link to="/browse">
       <i className="fa-solid fa-cart-shopping"></i>Browse Store
     </Link>
-  );
-  const search = (
-    <>
-      <input
-        className={styles.searchInput}
-        type="text"
-        placeholder="Search games..."
-      />
-      <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
-    </>
   );
 
   return (
@@ -39,7 +29,7 @@ const NavComponent = (props) => {
           {props.mode ? null : browseStore}
         </div>
         <div className={styles.navSearchbar}>
-          {props.mode === "store" ? search : null}
+          {props.mode === "store" ? <Search searchHandler={props.searchHandler}/> : null}
         </div>
         <div className={styles.navRight}>
           <a href="https://github.com/weak0">

@@ -6,6 +6,7 @@ import ImageSlider from "../UI/ImageSlider";
 import { Link, useParams } from "react-router-dom";
 import LoadingSpiner from "../UI/LoadingSpiner";
 import AddToCart from "../Cart/AddToCart";
+import Hearth from "../Wishlist/Hearth";
 
 const GamePage = () => {
   const [moreIsActive, setMoreIsActive] = useState(false);
@@ -110,10 +111,7 @@ const GamePage = () => {
               <div className={styles.actions}>
                 <span>
                   {gameInfo.price}
-                  <FontAwesomeIcon
-                    className={styles.heart}
-                    icon="fa-solid fa-heart"
-                  />
+                  <Hearth id={id}/>
                 </span>
                 <AddToCart
                   price={gameInfo.price}

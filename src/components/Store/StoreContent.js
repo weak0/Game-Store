@@ -1,5 +1,5 @@
 import styles from "./StoreContent.module.css";
-import GameListComponent from "../Games/GameListComponent";
+import GameListComponent from "../Games/GameList";
 
 const StoreContent = (props) => {
   return (
@@ -11,7 +11,7 @@ const StoreContent = (props) => {
       <div className={styles.sorting}>
         <div className={styles.sortingLeft}>
           <button>
-            Filter by: <b>{props.filters}</b>
+            Filter by: <b>{props.filters.type}</b>
           </button>
           <button onClick={props.clearFiltersHandler}>Clear Filters</button>
         </div>

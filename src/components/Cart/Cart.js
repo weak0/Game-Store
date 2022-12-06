@@ -7,8 +7,8 @@ import Li from "./CartLi";
 const Cart = (props) => {
   const dispatch = useDispatch();
 
-  const items = useSelector((state) => state.cart);
-  const amount = useSelector((state) => state.amount);
+  const items = useSelector((state) => state.cartReducer.cart);
+  const amount = useSelector((state) => state.cartReducer.amount);
 
   const clickHandler = (e) => {
     if (e.target.classList[0] === styles.cartBackdrop) {

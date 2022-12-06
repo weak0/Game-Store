@@ -99,6 +99,7 @@ const StoreNav = (props) => {
             Action
           </li>
         </ul>
+        <h2>Yours</h2>
         <ul>
           <li
             onMouseOver={onMouseOverHandler}
