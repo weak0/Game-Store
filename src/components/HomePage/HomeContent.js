@@ -65,10 +65,6 @@ const HomeContent = () => {
           />
           404 Page
         </Link>
-        <Link to='/404page'>
-          <FontAwesomeIcon className={styles.icon} icon="fa-solid fa-bug" />
-          404 Query
-        </Link>
         <Link to='/'>
           <FontAwesomeIcon
             className={styles.icon}
