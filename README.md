@@ -8,12 +8,12 @@ Technologies: React, Redux, Router.
 
 The most important features:
 
-Cart, Filters, WishList, based on with dynamic space sharing in /browse
+Cart, Filters, WishList, based on with dynamic space sharing in /browse.
  
 What have i learned:
 
-cleanup fn in useEffect, practice with redux, useParams,
+cleanup fn in useEffect, practice with redux, useParams.
 
 What needs to be corrected (imo):
 
-I need to write clearer code, start using some commit convetion, optymalize conection with FontAswome, normalize with  other browsers, mobail version
+I need to write clearer code, start using some commit convetion, optymalize conection with FontAswome, normalize with  other browsers, mobail version.
