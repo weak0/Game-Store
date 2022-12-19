@@ -29,7 +29,9 @@ const NavComponent = (props) => {
           {props.mode ? null : browseStore}
         </div>
         <div className={styles.navSearchbar}>
-          {props.mode === "store" ? <Search searchHandler={props.searchHandler}/> : null}
+          {props.mode === "store" ? (
+            <Search searchHandler={props.searchHandler} />
+          ) : null}
         </div>
         <div className={styles.navRight}>
           <a href="https://github.com/weak0">

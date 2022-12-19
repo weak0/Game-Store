@@ -17,7 +17,7 @@ const GamePage = () => {
     async function getGameInfo() {
       try {
         const response = await fetch(
-          `https://gamestore-42f62-default-rtdb.europe-west1.firebasedatabase.app/games/${dbkey}/${id}.json`
+          `${process.env.REACT_APP_GAME_DATA}${dbkey}/${id}.json`
         );
         if (!response.ok) {
           throw new Error("Upps... sory we couldnt load this page");
@@ -110,8 +110,8 @@ const GamePage = () => {
               </div>
               <div className={styles.actions}>
                 <span>
-                  {gameInfo.price}
-                  <Hearth id={id}/>
+                  ${gameInfo.price}
+                  <Hearth id={id} />
                 </span>
                 <AddToCart
                   price={gameInfo.price}

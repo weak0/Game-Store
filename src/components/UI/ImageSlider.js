@@ -7,25 +7,20 @@ const ImageSlider = (props) => {
 
   const handleAngleLeft = () => {
     setCurrentIndex((prevState) => {
-
-      if(prevState === 0){
+      if (prevState === 0) {
         return 3;
       }
-      return prevState - 1; 
-
-    } )
-
-
-  }
+      return prevState - 1;
+    });
+  };
   const handleAngleRight = () => {
     setCurrentIndex((prevState) => {
-          if(prevState === 3){
-      return 0;
-    } 
-    return prevState + 1;
-    })
-
-  }
+      if (prevState === 3) {
+        return 0;
+      }
+      return prevState + 1;
+    });
+  };
   const slides = props.images;
   const slidesStyle = {
     backgroundImage: `url(${slides[currentIndex]})`,
@@ -42,14 +37,31 @@ const ImageSlider = (props) => {
   return (
     <div className={styles.slider}>
       <div style={slidesStyle}>
-      <FontAwesomeIcon icon="fa-solid fa-chevron-left"  className={styles.angleLeft} onClick={handleAngleLeft}/>
-      <FontAwesomeIcon icon="fa-solid fa-chevron-right" className={styles.angleRight}
-      onClick={handleAngleRight}/>
-      <div className={styles.dotsbar}>
-        {slides.map((el, slideIndex) => {
-          return <div key={slideIndex} className={currentIndex === slideIndex ? styles.dot + " " + styles.active :  styles.dot} onClick={() => setCurrentIndex(slideIndex)}></div>
-        })}
-      </div>
+        <FontAwesomeIcon
+          icon="fa-solid fa-chevron-left"
+          className={styles.angleLeft}
+          onClick={handleAngleLeft}
+        />
+        <FontAwesomeIcon
+          icon="fa-solid fa-chevron-right"
+          className={styles.angleRight}
+          onClick={handleAngleRight}
+        />
+        <div className={styles.dotsbar}>
+          {slides.map((el, slideIndex) => {
+            return (
+              <div
+                key={slideIndex}
+                className={
+                  currentIndex === slideIndex
+                    ? styles.dot + " " + styles.active
+                    : styles.dot
+                }
+                onClick={() => setCurrentIndex(slideIndex)}
+              ></div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

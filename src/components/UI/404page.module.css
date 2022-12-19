@@ -1,37 +1,35 @@
 .errorPage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .errorPage div {
-    display: flex;
-    background-color: #2c2c2c;
-    border-radius: 20px;
-    padding: 30px;
-    border-bottom: 2px solid rgb(85, 164, 255);
-    box-shadow: 0 2px 2px black;
+  display: flex;
+  background-color: #2c2c2c;
+  border-radius: 20px;
+  padding: 30px;
+  border-bottom: 2px solid rgb(85, 164, 255);
+  box-shadow: 0 2px 2px black;
 }
 
 .errorPage img {
-    height: 200px;
+  height: 200px;
 }
 
 .errorPage article {
-    padding: 20px;
+  padding: 20px;
 }
 
 .errorPage h1 {
-
-    display: block;
-    font-size: 26px;
-    margin-bottom: 10px;
-    border-radius:20px 20px 0 0;
-
+  display: block;
+  font-size: 26px;
+  margin-bottom: 10px;
+  border-radius: 20px 20px 0 0;
 }
 
 .errorPage p {
- font-size: 18px;
- color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
 }

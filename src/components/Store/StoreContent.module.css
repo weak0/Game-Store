@@ -1,61 +1,58 @@
 .storeContent {
-    width: 100%;
-    margin-top: 30px;
-    padding: 0 20px;
+  width: 100%;
+  margin-top: 30px;
+  padding: 0 20px;
 }
 
 .storeContent h1 {
-    font-size: 48px;
-    margin-bottom:5px ;
+  font-size: 48px;
+  margin-bottom: 5px;
 }
 
 .storeContent h3 {
-    font-size: 16px;
-    margin-bottom: 5px;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 
 .sorting {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.sortingLeft, .sortingRight {
-    margin-top: 20px;
-    margin-bottom: 20px;
+.sortingLeft,
+.sortingRight {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .sortingRight {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.sortingLeft button{
-    padding: 10px 20px;
-    background-color: #262626;
-    margin-right: 10px;
-    color: white;
-    border: 0;
-    font-size: 16px;
-    border-radius: 10px;
-
+.sortingLeft button {
+  padding: 10px 20px;
+  background-color: #262626;
+  margin-right: 10px;
+  color: white;
+  border: 0;
+  font-size: 16px;
+  border-radius: 10px;
 }
 
 .sortingRight button {
-    border: 0;
-    background-color: #262626;
-    margin-left: 10px;
-    border-radius: 10px;
+  border: 0;
+  background-color: #262626;
+  margin-left: 10px;
+  border-radius: 10px;
 }
 
 .icon {
-    font-size: 28px;
-    padding: 10px 10px;
-
+  font-size: 28px;
+  padding: 10px 10px;
 }
 
-.sortingRight span{
-    opacity: 0.5;
-
+.sortingRight span {
+  opacity: 0.5;
 }

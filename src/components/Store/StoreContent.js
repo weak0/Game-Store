@@ -1,5 +1,6 @@
 import styles from "./StoreContent.module.css";
 import GameListComponent from "../Games/GameList";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const StoreContent = (props) => {
   return (
@@ -15,11 +16,18 @@ const StoreContent = (props) => {
           </button>
           <button onClick={props.clearFiltersHandler}>Clear Filters</button>
         </div>
-        {/* <div className={styles.sortingRight}>
+        <div className={styles.sortingRight}>
           <span>Display Options: </span>
-          <button><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-table-cells" /></button>
-          <button><FontAwesomeIcon className={styles.icon} icon="fa-solid fa-list" /></button>
-        </div> */}
+          <button>
+            <FontAwesomeIcon
+              className={styles.icon}
+              icon="fa-solid fa-table-cells"
+            />
+          </button>
+          <button>
+            <FontAwesomeIcon className={styles.icon} icon="fa-solid fa-list" />
+          </button>
+        </div>
       </div>
       <GameListComponent filters={props.filters} />
     </div>

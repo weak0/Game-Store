@@ -5,8 +5,8 @@ import styles from "./NavComponent.module.css";
 const Search = (props) => {
   const inputRef = useRef();
   const handleSubmit = (e) => {
-    e.preventDefault()
-    props.searchHandler(inputRef.current.value)
+    e.preventDefault();
+    props.searchHandler(inputRef.current.value);
   };
 
   return (
@@ -17,7 +17,10 @@ const Search = (props) => {
         placeholder="Search games..."
         ref={inputRef}
       />
-      <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" onClick={handleSubmit} />
+      <FontAwesomeIcon
+        icon="fa-solid fa-magnifying-glass"
+        onClick={handleSubmit}
+      />
     </form>
   );
 };

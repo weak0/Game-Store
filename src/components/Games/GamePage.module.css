@@ -5,6 +5,7 @@
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 10px 0 20px 0;
 }
 
@@ -155,7 +156,8 @@
   cursor: pointer;
 }
 
-.actions button:hover, .heart:hover {
+.actions button:hover,
+.heart:hover {
   color: rgb(124, 34, 207);
 }
 

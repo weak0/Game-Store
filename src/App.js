@@ -12,7 +12,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/browse" element={<Store />} />
         <Route path="/game/:dbkey/:id" element={<GamePage />} />
-        <Route path="*" element={<ErorrPage/>} />
+        <Route path="*" element={<ErorrPage />} />
       </Routes>
     </div>
   );

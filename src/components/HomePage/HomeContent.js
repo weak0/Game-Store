@@ -54,18 +54,18 @@ const HomeContent = () => {
       </section>
       <aside className={styles.quickNavigation}>
         <h2>Quick Navigation</h2>
-        <Link to='/game/-NIDvAgsqSttL605KhUh/m1'>
+        <Link to="/game/-NIDvAgsqSttL605KhUh/m1">
           <FontAwesomeIcon className={styles.icon} icon="fa-solid fa-headset" />
           Gaming Page
         </Link>
-       <Link to='/404page'>
+        <Link to="/404page">
           <FontAwesomeIcon
             className={styles.icon}
             icon="fa-solid fa-circle-exclamation"
           />
           404 Page
         </Link>
-        <Link to='/'>
+        <Link to="/">
           <FontAwesomeIcon
             className={styles.icon}
             icon="fa-solid fa-microchip"

@@ -35,22 +35,22 @@ const AddToCart = (props) => {
   };
 
   return (
-    <div style={{fonSize: props.fontSize}} >
+    <div style={{ fonSize: props.fontSize }}>
       {!addedToCart ? (
-      <button
-        key={props.id}
-        className={addtoCartStyle}
-        onClick={addToCartHandler}
-      >
-        Add to cart+
-      </button>
+        <button
+          key={props.id}
+          className={addtoCartStyle}
+          onClick={addToCartHandler}
+        >
+          Add to cart+
+        </button>
       ) : (
-      <button
-        className={addtoCartStyle + " " + styles.active}
-        onClick={addToCartHandler}
-      >
-        Added
-      </button>
+        <button
+          className={addtoCartStyle + " " + styles.active}
+          onClick={addToCartHandler}
+        >
+          Added
+        </button>
       )}
     </div>
   );

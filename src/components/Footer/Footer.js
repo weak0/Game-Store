@@ -3,7 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <h4> <FontAwesomeIcon icon="fa-solid fa-headphones" /> Game Store</h4>
+      <h4>
+        {" "}
+        <FontAwesomeIcon icon="fa-solid fa-headphones" /> Game Store
+      </h4>
       <div className={styles.lists}>
         <div>
           <span>
@@ -38,8 +41,8 @@ const Footer = () => {
       </div>
       <div>
         This page was built by Maciej Gorzela with React. Portions of this page
-        are inspired by RAWG, RAWG.io. and github user gianlucajahn This page was built only for
-        educational purposes.
+        are inspired by RAWG, RAWG.io. and github user gianlucajahn This page
+        was built only for educational purposes.
       </div>
       <div className={styles.links}>
         <p>Privacy</p>
