@@ -8,7 +8,7 @@ Technologies: React, Redux, Router.
 
 The most important features:
 
-Cart, Filters, WishList, based on with dynamic space sharing in /browse.
+Cart, Filters, WishList,space managment based on width in /browse.
  
 What have i learned:
 
