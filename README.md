@@ -1,4 +1,3 @@
-Procjet not end yet!
 Live demo: https://lighthearted-chaja-fbc8d7.netlify.app/
 
 This project except design is independet. 
